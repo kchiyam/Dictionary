@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cleveroad.audiovisualization.GLAudioVisualizationView
+        android:id="@+id/visualizer_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:av_backgroundColor="@color/av_color_bg"
+        app:av_bubblesRandomizeSizes="true"
+        app:av_bubblesSize="@dimen/bubble_size"
+        app:av_layersCount="4"
+        app:av_wavesCount="7"
+        app:av_wavesFooterHeight="@dimen/footer_height"
+        app:av_wavesHeight="@dimen/wave_height" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="Result go here"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:text="TAP TO TRANSLATE"
+        android:textAlignment="center"
+        android:textColor="@color/av_color_bg"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/btn_recognize_overlay"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_above="@id/tv_status"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_recognize_overlay" />
+
+    <ImageButton
+        android:id="@+id/btn_recognize"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@id/btn_recognize_overlay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/btn_recognize"
+        android:elevation="6dp"
+        android:src="@drawable/ic_microphone" />
+
+
+</RelativeLayout>
